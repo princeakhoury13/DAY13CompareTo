@@ -9,64 +9,26 @@ namespace Generics
     public class Maximum
     {
 
-        public static int MaximumNumber(int a, int b, int c)
+       
+
+        public static void  Compare<T>(T a, T b, T c) where T : IComparable
         {
             if (a.CompareTo(b) > 0 && a.CompareTo(c) > 0 || a.CompareTo(b) >= 0 && a.CompareTo(c) > 0 || a.CompareTo(b) > 0 && a.CompareTo(c) >= 0)
             {
-                return a;
+                Console.WriteLine("Maximum element is "+a);
             }
 
             if (b.CompareTo(a) > 0 && b.CompareTo(c) > 0 || b.CompareTo(a) >= 0 && b.CompareTo(c) > 0 || b.CompareTo(a) > 0 && b.CompareTo(c) >= 0)
             {
-                return b;
+                Console.WriteLine("Maximum element is " + b);
             }
 
             if (c.CompareTo(a) > 0 && c.CompareTo(b) > 0 || c.CompareTo(a) >= 0 && c.CompareTo(b) > 0 || c.CompareTo(a) > 0 && c.CompareTo(b) >= 0)
             {
-                return c;
+                Console.WriteLine("Maximum element is " + c);
 
             }
-            return a;
-        }
-
-        public static double MaximumFloatNumber(double a, double b, double c)
-        {
-            if (a.CompareTo(b) > 0 && a.CompareTo(c) > 0 || a.CompareTo(b) >= 0 && a.CompareTo(c) > 0 || a.CompareTo(b) > 0 && a.CompareTo(c) >= 0)
-            {
-                return a;
-            }
-
-            if (b.CompareTo(a) > 0 && b.CompareTo(c) > 0 || b.CompareTo(a) >= 0 && b.CompareTo(c) > 0 || b.CompareTo(a) > 0 && b.CompareTo(c) >= 0)
-            {
-                return b;
-            }
-
-            if (c.CompareTo(a) > 0 && c.CompareTo(b) > 0 || c.CompareTo(a) >= 0 && c.CompareTo(b) > 0 || c.CompareTo(a) > 0 && c.CompareTo(b) >= 0)
-            {
-                return c;
-
-            }
-            return a;
-        }
-
-        public static string MaximumString(string a, string b, string c)
-        {
-            if (a.CompareTo(b) > 0 && a.CompareTo(c) > 0 || a.CompareTo(b) >= 0 && a.CompareTo(c) > 0 || a.CompareTo(b) > 0 && a.CompareTo(c) >= 0)
-            {
-                return a;
-            }
-
-            if (b.CompareTo(a) > 0 && b.CompareTo(c) > 0 || b.CompareTo(a) >= 0 && b.CompareTo(c) > 0 || b.CompareTo(a) > 0 && b.CompareTo(c) >= 0)
-            {
-                return b;
-            }
-
-            if (c.CompareTo(a) > 0 && c.CompareTo(b) > 0 || c.CompareTo(a) >= 0 && c.CompareTo(b) > 0 || c.CompareTo(a) > 0 && c.CompareTo(b) >= 0)
-            {
-                return c;
-
-            }
-            return a;
+           
         }
     }
 }
