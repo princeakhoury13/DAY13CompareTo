@@ -6,20 +6,14 @@ namespace generics
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Maximum using CompareTo() Mathod");
-            Console.WriteLine("Enter 1st String: ");
-            string a = Convert.ToString(Console.ReadLine());
-            Console.WriteLine("Enter 2nd String: ");
-            string b = Convert.ToString(Console.ReadLine());
-            Console.WriteLine("Enter 3rd String: ");
-            string c = Convert.ToString(Console.ReadLine());
 
-            
-            
-            string max = Maximum.MaximumString(a, b, c);
+            Console.WriteLine("Integer Values");
+            Maximum.Compare<int>(12, 11, 1);
+            Console.WriteLine("Double Values");
+            Maximum.Compare<double>(1.1, 3.5, 3.4);
+            Console.WriteLine("String Values");
+            Maximum.Compare<string>("ab", "abc", "abcd");
 
-            Console.WriteLine("The maximum of the given three String is : " + max);
-            
         }
 
     }
